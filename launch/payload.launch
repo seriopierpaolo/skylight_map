@@ -1,0 +1,15 @@
+<launch>
+<node pkg="rosbag" type="play" name="player" output="screen" args=" -r 1 --clock /home/pserio/rosbags/2023-01-06-13-48-54.bag"/>
+
+<!--TFs are built-in in luvmix launchfile-->
+
+    <node name="dc1rot" pkg="cube_dc_map" type="dc1rot"/>
+    <node name="dc2rot" pkg="cube_dc_map" type="dc2rot"/>
+    
+    <node name="conc2pcbm" pkg="cube_dc_map" type="conc2pcbm"/>
+    <node name="optmap" pkg="cube_dc_map" type="optmap"/>  
+    
+    
+    
+ 
+</launch>
